@@ -13,11 +13,6 @@
     overflow: hidden;
     z-index: 1;
 }
-.cta-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .btn:disabled {
     opacity: 0.6;
@@ -32,9 +27,9 @@
 }
 
 .btn.secondary {
-    background: white;
+    background: rgb(140, 168, 209);
     color: var(--primary-text);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
 }
 

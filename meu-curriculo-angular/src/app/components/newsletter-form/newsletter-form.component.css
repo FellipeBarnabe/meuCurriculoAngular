@@ -1,0 +1,55 @@
+.form-section {
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  p{
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+  
+ .form-section .text {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+  }
+  
+  .form-section form {
+    margin-top: 20px;
+  }
+  
+  .form-section label {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+  }
+  
+  .form-section input[type="text"],
+  .form-section input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-section input[type="submit"] {
+    background-color: white;
+    color: blueviolet;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .form-section input[type="submit"]:hover {
+    background-color: #f2f2f2;
+  }
+  
