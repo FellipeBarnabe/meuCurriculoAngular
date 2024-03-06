@@ -1,0 +1,76 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 200px; /* Adjust height as needed */
+    background-color: #3498db; /* Adjust background color */
+    color: #fff; /* Adjust text color */
+  }
+  
+  .hero-body {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem; /* Adjust font size */
+    padding: 20px;
+  }
+  
+  /* Contact Form Section */
+  .section {
+    padding: 20px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust width as needed */
+  }
+  
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input,
+  .textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .textarea {
+    height: 100px; /* Adjust height as needed */
+  }
+  
+  .button {
+    margin-top: 15px;
+    background-color: #f1c40f; /* Adjust button color */
+    color: #fff; /* Adjust button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Media Queries (Optional) */
+  @media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .title {
+      font-size: 1.8rem; /* Adjust font size */
+    }
+    .contact-form {
+      width: 80%; /* Adjust width for mobile */
+    }
+  }
+  

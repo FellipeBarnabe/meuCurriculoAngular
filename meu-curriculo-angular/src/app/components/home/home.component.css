@@ -1,5 +1,98 @@
-.cta-section{
+/* Estilo Base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  
+  /* Container Principal */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Seções */
+  section {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Perfil */
+  .profile {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  .nome {
+    font-size: 24px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .titulo {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  
+  /* Seções de Conteúdo */
+  .experiencia-profissional,
+  .habilidades-computacao,
+  .cursos-programacao,
+  .formacao-academica {
+    padding: 20px;
+  }
+  
+  /* Títulos de Seção */
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Listas */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+  }
+  
+  /* Links */
+  a {
+    color: #05335c;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Media Queries (Opcional) */
+  @media (max-width: 768px) {
+    /* Ajustar estilos para telas menores */
+    .container {
+      padding: 10px;
+    }
+  
+    section {
+      margin-bottom: 10px;
+    }
+  
+    .profile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

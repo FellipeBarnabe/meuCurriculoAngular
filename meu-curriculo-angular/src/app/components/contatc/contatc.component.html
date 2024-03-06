@@ -1,0 +1,33 @@
+<section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Entre em contato</h1>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+  
+      <form [formGroup]="contatcForm" class="contact-form">
+        <div class="field">
+          <label class="label">Nome</label>
+          <input type="text" name="nome" class="input" formControlName="nome">
+        </div>
+  
+        <div class="field">
+          <label class="label">Email</label>
+          <input type="email" name="email" class="input" formControlName="email">
+        </div>
+  
+        <div class="field">
+          <label class="label">Sua Mensagem</label>
+          <textarea name="mensagem" class="textarea" formControlName="mensagem"></textarea>
+        </div>
+  
+        <button type="submit" class="button is-large is warning" (submit)="onSubmit()">Enviar!</button>
+      </form>
+  
+    </div>
+  </section>
+  
