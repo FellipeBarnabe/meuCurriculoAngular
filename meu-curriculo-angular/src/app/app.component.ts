@@ -13,5 +13,5 @@ import { ContatcComponent } from './components/contatc/contatc.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'meu-curriculo-angular';
+  title = 'Meu currículo Angular';
 }
