@@ -1,0 +1,4 @@
+
+interface contatcResponse{
+    message: string
+}
