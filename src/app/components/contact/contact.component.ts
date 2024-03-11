@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { FormService } from '../../services/form.service';
 
+import { Component } from '@angular/core';
+import { FormService } from '../../services/form.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-contatc',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, HttpClientModule],
   providers:[FormService],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
