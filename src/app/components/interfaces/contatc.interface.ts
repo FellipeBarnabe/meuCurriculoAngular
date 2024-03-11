@@ -1,4 +1,3 @@
-
-interface contatcResponse{
+export interface contatcResponse{
     message: string
 }

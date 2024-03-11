@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ContatcComponent } from './components/contatc/contatc.component';
+import { ContatcComponent } from './components/contact/contact.component';
 
 
 @Component({
