@@ -8,8 +8,8 @@ import { FormService } from '../../services/form.service';
   standalone: true,
   imports: [ReactiveFormsModule],
   providers:[FormService],
-  templateUrl: './contatc.component.html',
-  styleUrls: ['./contatc.component.css']
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
 })
 export class ContatcComponent {
   contatcForm!: FormGroup; // Declaração do FormGroup

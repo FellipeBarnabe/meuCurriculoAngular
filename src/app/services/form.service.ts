@@ -2,7 +2,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { contatcResponse } from '../components/interfaces/contatc.interface';
+import { ContatcResponse } from '../components/interfaces/contatc.interface';
+import { ContatcForm } from '../models/formContact';
 
 
 
@@ -15,10 +16,13 @@ export class FormService {
 
   constructor(private http: HttpClient) { }
 
-  sendData(name: string,email:string):Observable<contatcResponse>{
-    const data = {name,email};
+  sendData(name: string,email:string):Observable<ContatcResponse>{
+    const data: ContatcForm = {name,email};
 
-    return this.http.post<contatcResponse>(this.endpointUrl,data);
+    const response= this.http.post<ContatcResponse>(this.endpointUrl,data);
+    console.log(response);
+    return response
+
   }
 
 
