@@ -1,7 +1,5 @@
-import json
-from jsonschema import validate
 from flask import Flask, request, jsonify
-from funcoes.email import enviar_email
+from funcoes.email import enviar_email, monta_html
 from http import HTTPStatus
 
 # enviar_email("<h1>Ola!</h1>")
@@ -10,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.route("/processaFormulario", methods=["POST"])
-def xxx():
+def processa_formulario():
     data = request.get_json()
 
     if not data:
@@ -30,7 +28,9 @@ def xxx():
     if erros:
         return jsonify({"erros": erros}), HTTPStatus.UNPROCESSABLE_ENTITY
 
-    return jsonify({"nome": "Fellipe", "idade": 34})
+    enviar_email(monta_html(data=data))
+
+    return jsonify({"success": True, "message": "Sua mensagem foi enviada."}), HTTPStatus.OK
 
 
 app.run(debug=True)
