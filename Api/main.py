@@ -19,13 +19,13 @@ def xxx():
     erros = []
 
     if not "nome" in data:
-        erros.append('O atributo "nome" não foi informado.')
+        erros.append('O atributo [nome] não foi informado.')
 
     if not "email" in data:
-        erros.append('O atributo "email" não foi informado.')
+        erros.append('O atributo [email] não foi informado.')
 
     if not "message" in data:
-        erros.append('O atributo "message" não foi informado.')
+        erros.append('O atributo [message] não foi informado.')
 
     if erros:
         return jsonify({"erros": erros}), HTTPStatus.UNPROCESSABLE_ENTITY
