@@ -25,4 +25,4 @@ def enviar_email(corpo:str):
     server.close()
 
 def monta_html(data):
-    return f"<h3>Oi, Fellipe.</h3><p>O(a) {data['nome']} ({data['email']}), te mandou a seuinte mensagem:</p><p>\"{data['message']}\"</p>"
+    return f"<h3>Oi, Fellipe.</h3><p>O(a) {data['nome']} ({data['email']}), te mandou a seguinte mensagem:</p><p>\"{data['message']}\"</p>"
