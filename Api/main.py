@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from funcoes.email import enviar_email
 from http import HTTPStatus
-from models.Email import Email
+from models.Formulario import Formulario
 
 
 app = Flask(__name__)
@@ -17,19 +17,26 @@ def processa_formulario():
     erros = []
 
     if not "nome" in data:
-        erros.append('O atributo [nome] não foi informado.')
+        erros.append("O atributo [nome] não foi informado.")
 
     if not "email" in data:
-        erros.append('O atributo [email] não foi informado.')
+        erros.append("O atributo [email] não foi informado.")
 
     if not "message" in data:
-        erros.append('O atributo [message] não foi informado.')
+        erros.append("O atributo [message] não foi informado.")
 
     if erros:
-        return jsonify({"success": False, "erros": erros}), HTTPStatus.UNPROCESSABLE_ENTITY
+        return (
+            jsonify({"success": False, "erros": erros}),
+            HTTPStatus.UNPROCESSABLE_ENTITY,
+        )
 
-    enviar_email(email=Email(data['nome'], data['email'], data['message']))
+    enviar_email(form=Formulario(data["nome"], data["email"], data["message"]))
 
-    return jsonify({"success": True, "message": "Sua mensagem foi enviada."}), HTTPStatus.OK
+    return (
+        jsonify({"success": True, "message": "Sua mensagem foi enviada."}),
+        HTTPStatus.OK,
+    )
 
-app.run(debug=True)
+
+app.run()
