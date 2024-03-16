@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
-from funcoes.email import enviar_email, monta_html
+from funcoes.email import enviar_email
 from http import HTTPStatus
+from models.Email import Email
 
-# enviar_email("<h1>Ola!</h1>")
 
 app = Flask(__name__)
 
@@ -26,11 +26,10 @@ def processa_formulario():
         erros.append('O atributo [message] não foi informado.')
 
     if erros:
-        return jsonify({"erros": erros}), HTTPStatus.UNPROCESSABLE_ENTITY
+        return jsonify({"success": False, "erros": erros}), HTTPStatus.UNPROCESSABLE_ENTITY
 
-    enviar_email(monta_html(data=data))
+    enviar_email(email=Email(data['nome'], data['email'], data['message']))
 
     return jsonify({"success": True, "message": "Sua mensagem foi enviada."}), HTTPStatus.OK
-
 
 app.run(debug=True)
