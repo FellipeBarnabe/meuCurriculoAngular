@@ -8,13 +8,13 @@ from models.Formulario import Formulario
 
 
 def enviar_email(form: Formulario):
+    load_dotenv()
     email_msg = MIMEMultipart()
     email_msg["To"] = f"{form.name} <{form.sender}>"
-    email_msg["From"] = "SMTP Meu Curriculo <marconemendonca@gmail.com>"
+    email_msg["From"] = f"SMTP Meu Curriculo <{os.getenv("RECEIVER_EMAIL")}>"
     email_msg["Subject"] = "Formulário de contato: meu currículo."
     email_msg.attach(MIMEText(form.get_html_message(), "html", "utf-8"))
 
-    load_dotenv()
     server = smtplib.SMTP(os.getenv("HOST_EMAIL"), os.getenv("PORT_EMAIL"))
     server.ehlo()
     server.starttls()
