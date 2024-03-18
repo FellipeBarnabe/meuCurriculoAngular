@@ -1,55 +1,52 @@
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
-import { Component } from '@angular/core';
+import { ContatcForm } from '../../models/formContact';
 import { FormService } from '../../services/form.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ContatcForm } from '../../models/formContact';
 
 @Component({
   selector: 'app-contatc',
   standalone: true,
   imports: [ReactiveFormsModule, HttpClientModule],
-  providers:[FormService],
+  providers: [FormService],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
 })
-export class ContatcComponent {
-  formGroup: FormGroup; // Declaração do FormGroup
+export class ContatcComponent implements OnInit {
+  myForm: FormGroup = new FormGroup({}); // Declaração do FormGroup
+  
+  constructor(private service: FormService) {}
 
-  constructor(private service:FormService) {
-    this.formGroup = new FormGroup({
-      name: new FormControl('', [Validators.required]), // Campo "Nome" com validação obrigatória
+  ngOnInit() {
+    this.myForm = new FormGroup({
+      name: new FormControl('', Validators.required), // Campo "Nome" com validação obrigatória
       email: new FormControl('', [Validators.required, Validators.email]), // Campo "Email" com validação obrigatória e de formato de email
-      message: new FormControl('', [Validators.required]), // Campo "Mensagem" com validação obrigatória
+      message: new FormControl('', Validators.required), // Campo "Mensagem" com validação obrigatória
     });
   }
 
- // onSubmit() {
-    // Envia o formulário e trata o resultado (opcional)
-  //  if (this.contatcForm.valid) {
-      // O formulário é válido, faça algo com os dados
-   //   console.log(this.contatcForm.value);
-  //  } else {
-      // O formulário é inválido, mostre erros de validação
-   //   console.log('Formulário inválido!');
- //   }
- // }
-  onSubmit(){
-    const contatcForm: ContatcForm = { 
-      name: this.formGroup.value.name,
-      email: this.formGroup.value.email,
-      message: this.formGroup.value.message 
-    }
-    console.log(contatcForm);
+  onSubmit() {
+    const contatcForm: ContatcForm = {
+      name: this.myForm.value.name,
+      email: this.myForm.value.email,
+      message: this.myForm.value.message,
+    };
 
-    if(this.formGroup.valid){
+    if (this.myForm.valid) {
       this.service.sendData(contatcForm).subscribe({
-        next: ()=>{
-          this.formGroup.reset();
-        }
-      })
+        next: () => {
+          this.myForm.reset();
+          alert("TODO: melhorar a resposta da API.")
+        },
+
+        error: (err) => console.error(err),
+      });
     }
   }
-
-
 }

@@ -56,11 +56,15 @@ body {
   .button {
     margin-top: 15px;
     background-color: #f1c40f; /* Adjust button color */
-    color: #fff; /* Adjust button text color */
+    color: black; /* Adjust button text color */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .disabled {
+    background-color: #f5e9b7; 
   }
   
   /* Media Queries (Optional) */

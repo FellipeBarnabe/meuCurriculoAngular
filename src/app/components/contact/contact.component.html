@@ -1,33 +1,54 @@
 <section class="hero is-primary is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">Entre em contato</h1>
-      </div>
-    </div>
-  </section>
-  
-  <section class="section">
+  <div class="hero-body">
     <div class="container">
-  
-      <form [formGroup]="formGroup" class="contact-form">
-        <div class="field">
-          <label class="label">Nome</label>
-          <input type="text" name="name" class="input" formcontrolname="name" placeholder="Seu Nome Completo">
-        </div>
-  
-        <div class="field">
-          <label class="label">Email</label>
-          <input type="email" name="email" class="input" formcontrolname="email" placeholder="seu_email@dominio.com">
-        </div>
-  
-        <div class="field">
-          <label class="label">Sua Mensagem</label>
-          <textarea name="message" class="textarea" formcontrolname="message" placeholder="Sua mensagem..."></textarea>
-        </div>
-  
-        <button type="submit" class="button is-large is warning" (click)="onSubmit()" [disabled]="!formGroup.valid">Enviar!</button>
-      </form>
-  
+      <h1 class="title">Entre em contato</h1>
     </div>
-  </section>
-  
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <form [formGroup]="myForm" class="contact-form">
+      <div class="field">
+        <label class="label">Nome</label>
+        <input
+          type="text"
+          name="name"
+          class="input"
+          formControlName="name"
+          placeholder="Seu Nome Completo"
+        />
+      </div>
+
+      <div class="field">
+        <label class="label">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="input"
+          formControlName="email"
+          placeholder="seu_email@dominio.com"
+        />
+      </div>
+
+      <div class="field">
+        <label class="label">Sua Mensagem</label>
+        <textarea
+          name="message"
+          class="textarea"
+          formControlName="message"
+          placeholder="Sua mensagem..."
+        ></textarea>
+      </div>
+
+      <input
+        type="submit"
+        class="button"
+        [class.disabled] = "!myForm.valid"
+        (click)="onSubmit()"
+        [disabled]="!myForm.valid"
+        value="Enviar"
+      />
+    </form>
+  </div>
+</section>
