@@ -5,7 +5,13 @@ from models.Formulario import Formulario
 
 
 app = Flask(__name__)
-
+# Configuração do CORS
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:4200')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+   #response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
 
 @app.route("/processaFormulario", methods=["POST"])
 def processa_formulario():
@@ -16,8 +22,8 @@ def processa_formulario():
 
     erros = []
 
-    if not "nome" in data:
-        erros.append("O atributo [nome] não foi informado.")
+    if not "name" in data:
+        erros.append("O atributo [name] não foi informado.")
 
     if not "email" in data:
         erros.append("O atributo [email] não foi informado.")
@@ -31,7 +37,7 @@ def processa_formulario():
             HTTPStatus.UNPROCESSABLE_ENTITY,
         )
 
-    enviar_email(form=Formulario(data["nome"], data["email"], data["message"]))
+    enviar_email(form=Formulario(data["name"], data["email"], data["message"]))
 
     return (
         jsonify({"success": True, "message": "Sua mensagem foi enviada."}),
