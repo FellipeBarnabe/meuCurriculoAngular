@@ -3,6 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Component } from '@angular/core';
 import { FormService } from '../../services/form.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ContatcForm } from '../../models/formContact';
 
 @Component({
   selector: 'app-contatc',
@@ -13,13 +14,13 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./contact.component.css']
 })
 export class ContatcComponent {
-  contatcForm!: FormGroup; // Declaração do FormGroup
+  formGroup: FormGroup; // Declaração do FormGroup
 
   constructor(private service:FormService) {
-    this.contatcForm = new FormGroup({
-      nome: new FormControl('', [Validators.required]), // Campo "Nome" com validação obrigatória
+    this.formGroup = new FormGroup({
+      name: new FormControl('', [Validators.required]), // Campo "Nome" com validação obrigatória
       email: new FormControl('', [Validators.required, Validators.email]), // Campo "Email" com validação obrigatória e de formato de email
-      mensagem: new FormControl('', [Validators.required]), // Campo "Mensagem" com validação obrigatória
+      message: new FormControl('', [Validators.required]), // Campo "Mensagem" com validação obrigatória
     });
   }
 
@@ -34,10 +35,17 @@ export class ContatcComponent {
  //   }
  // }
   onSubmit(){
-    if(this.contatcForm.valid){
-      this.service.sendData(this.contatcForm.value.name,this.contatcForm.value.Email).subscribe({
+    const contatcForm: ContatcForm = { 
+      name: this.formGroup.value.name,
+      email: this.formGroup.value.email,
+      message: this.formGroup.value.message 
+    }
+    console.log(contatcForm);
+
+    if(this.formGroup.valid){
+      this.service.sendData(contatcForm).subscribe({
         next: ()=>{
-          this.contatcForm.reset();
+          this.formGroup.reset();
         }
       })
     }

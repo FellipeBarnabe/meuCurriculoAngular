@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ContatcResponse } from '../components/interfaces/contatc.interface';
+import { ContatcResponse } from '../models/contatc.interface';
 import { ContatcForm } from '../models/formContact';
 
 
@@ -12,14 +12,13 @@ import { ContatcForm } from '../models/formContact';
 })
 export class FormService {
 
-  private endpointUrl ='https://faed47pcwb7biktidlecuafuty0aegep.lambda-url.us-east-1.on.aws/';
+  private endpointUrl = 'http://127.0.0.1:5000/processaFormulario'
 
   constructor(private http: HttpClient) { }
 
-  sendData(name: string,email:string):Observable<ContatcResponse>{
-    const data: ContatcForm = {name,email};
+  sendData(contatcForm: ContatcForm): Observable<ContatcResponse> {
 
-    const response= this.http.post<ContatcResponse>(this.endpointUrl,data);
+    const response = this.http.post<ContatcResponse>(this.endpointUrl, contatcForm);
     console.log(response);
     return response
 

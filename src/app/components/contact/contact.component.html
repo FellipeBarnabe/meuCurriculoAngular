@@ -9,23 +9,23 @@
   <section class="section">
     <div class="container">
   
-      <form [formGroup]="contatcForm" class="contact-form">
+      <form [formGroup]="formGroup" class="contact-form">
         <div class="field">
           <label class="label">Nome</label>
-          <input type="text" name="nome" class="input" formControlName="nome">
+          <input type="text" name="name" class="input" formcontrolname="name" placeholder="Seu Nome Completo">
         </div>
   
         <div class="field">
           <label class="label">Email</label>
-          <input type="email" name="email" class="input" formControlName="email">
+          <input type="email" name="email" class="input" formcontrolname="email" placeholder="seu_email@dominio.com">
         </div>
   
         <div class="field">
           <label class="label">Sua Mensagem</label>
-          <textarea name="mensagem" class="textarea" formControlName="mensagem"></textarea>
+          <textarea name="message" class="textarea" formcontrolname="message" placeholder="Sua mensagem..."></textarea>
         </div>
   
-        <button type="submit" class="button is-large is warning" (click)="onSubmit()" [disabled]="!contatcForm.valid">Enviar!</button>
+        <button type="submit" class="button is-large is warning" (click)="onSubmit()" [disabled]="!formGroup.valid">Enviar!</button>
       </form>
   
     </div>
