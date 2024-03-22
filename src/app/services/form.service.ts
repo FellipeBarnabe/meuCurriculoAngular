@@ -1,11 +1,8 @@
-
+import { ContatcForm } from '../models/formContact';
+import { ContatcResponse } from '../models/ContatcResponse';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ContatcResponse } from '../models/contatc.interface';
-import { ContatcForm } from '../models/formContact';
-
-
 
 @Injectable({
   providedIn: 'root'

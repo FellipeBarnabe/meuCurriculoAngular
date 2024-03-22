@@ -1,59 +1,44 @@
-<section class="container">
-  <div class="profile">
-    <h2 class="nome">Fellipe Barnabé Alves</h2>
-    <h1 class="titulo"></h1>
+<header>
+  <h2>Fellipe Barnabé Alves<br />FullStack Jr.</h2>
+  <div class="column-right">
+    <a id="email">
+      <fa-icon [icon]="emailIcon"></fa-icon>
+      fellipebarnabe.stack&#64;gmail.com</a
+    >
+    <a
+      id="linkedin"
+      href="https://www.linkedin.com/in/fellipe-barnabé-b584b3277"
+    >
+    <fa-icon [icon]="linkedinIcon"></fa-icon>
+      https://www.linkedin.com/in/fellipeBarnabe
+    </a>
+    <a href="" id="whatsapp">
+      <fa-icon [icon]="whatsAppIcon"></fa-icon>
+      (81) 9 93100585</a>
   </div>
-
-  <section class="experiencia-profissional">
-    <h2>Experiência Profissional em Administração (2013 - 2019)</h2>
-    <p class="exp-prossional"><strong>Empresa: Confecção de fardamentos linha dupla (Goiana, Pernambuco).</strong></p>
-    <ul class="lista">
-      <li>Registro e organização de documentos administrativos.</li>
-      <li>Atendimento a telefonemas e clientes.</li>
-      <li>Apoio na gestão de estoque.</li>
-      <li>Cooperação na elaboração de relatórios e planilhas.</li>
-      <li>Utilização de Corel Draw para vetorização de banners, imagens e bordados.</li>
-      <li>Execução de outras tarefas relacionadas à administração conforme necessário.</li>
-      <li>Utilização do Microsoft Excel e outras planilhas para elaboração de relatórios e análises.</li>
-      <li>Análise de performance e contribuição dos sistemas internos, buscando novos fornecedores quando necessário.
-      </li>
-
-    </ul>
-  </section>
-
-  <section class="habilidades-computacao">
-    <h2>Habilidades em Computação</h2>
-    <ul class="itens-habilidades-computacao">
-      <li>Habilidades e conhecimentos no framework React e Angular; </li>
-      <li>Experiência prática com o framework React e Angular.</li>
-      <li>Proficiência em Git e controle de versão: <a
-          href="https://github.com/FellipeBarnabe">github.com/FellipeBarnabe</a>.</li>
-      <li>Habilidade em aprender a desenvolver consultando documentações, fóruns e demais fontes públicas de
-        conhecimento;</li>
-      <li>Uso eficaz de ferramentas de desenvolvimento “IDE”, como Visual Studio Code.</li>
-      <li>Comunicação eficiente com a equipe; e</li>
-      <li>Responsabilidade e autonomia para realização de trabalho remoto.</li>
-      <li>Treinamento Admin em SalesForce.</li>
-    </ul>
-  </section>
-
-  <section class="cursos-programacao">
-    <h2>Cursos na área de Computação</h2>
-    <ul class="itens-cursos-programacao">
-      <li>Curso: Lógica de Programação em C#.<br>Instituição: Udemy.</li>
-      <li>Curso: Módulo Front-End (Programação Javascript, HTML, CSS, REACT, Git e GitHub) 400h.<br>Instituição:
-        BootCamp Trybe.</li>
-      <li>Training de Salesforce Administrator.<br>Empresa: Sottelli (Campinas, São Paulo).</li>
-    </ul>
-  </section>
-
-  <section class="formacao-academica">
-    <h2>Formação Acadêmica</h2>
-    <ul>
-      <li class="item1-formacao-academica">Graduado em bacharelado em Filosofia.<br>Instituição: Universidade Federal da
-        Paraíba.</li>
-    </ul>
-  </section>
-
-  <app-contatc></app-contatc>
-</section>
+</header>
+<div class="container">
+  <div class="column-left">
+    <article>
+      <resume-section
+        [resumeSectionList]="workExperienceList"
+        [educationSectionList]="educationList"
+      ></resume-section>
+    </article>
+  </div>
+  <div class="column-right">
+    <aside>
+      <unordered-list
+        [itemsList]="habilitiesList"
+        title="Habilidades"
+      ></unordered-list>
+    </aside>
+    <aside>
+      <unordered-list
+        [itemsList]="toolsList"
+        title="Ferramentas"
+      ></unordered-list>
+    </aside>
+  </div>
+</div>
+<app-contatc></app-contatc>

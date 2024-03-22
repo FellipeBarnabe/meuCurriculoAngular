@@ -1,5 +1,22 @@
+:root {
+    --vermelho-primario: #EB5B40;
+    --line_color: #1b1919;
+    --back_color: #f18d7b;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
 
 body {
-    background-color: #f7f7f7; /* Defina a cor de fundo desejada */
+    background-color: #f7f7f7;
+    /* Defina a cor de fundo desejada */
 }
