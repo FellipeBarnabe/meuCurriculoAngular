@@ -1,16 +1,17 @@
 import { Component, NgZone, inject } from '@angular/core';
 
-import { PrimaryButtonComponent } from '../../components/primary-button/primary-button.component';
 import { Router } from '@angular/router';
+import { SecondaryButtonComponent } from '../../components/secondary-button/secondary-button.component';
 
 @Component({
   selector: 'app-notfound',
   standalone: true,
-  imports: [PrimaryButtonComponent],
+  imports: [SecondaryButtonComponent],
   templateUrl: './notfound.component.html',
   styleUrl: './notfound.component.css',
 })
 export class NotfoundComponent {
+  readonly btnHomeText:string='pagina inicial'
   time: number = 15;
 
   constructor(private router: Router, private zone: NgZone) {

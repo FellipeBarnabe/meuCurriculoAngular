@@ -25,4 +25,10 @@ body {
 div.column_left,
 div.column_right{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption {
+  visibility: hidden; ;
 }
