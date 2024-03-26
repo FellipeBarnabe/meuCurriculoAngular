@@ -11,4 +11,5 @@ import { RouterLink } from '@angular/router';
 })
 export class SecondaryButtonComponent {
   @Input() buttonText: string = '';
+  @Input() navigatePath: string = '/';
 }

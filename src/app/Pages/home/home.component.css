@@ -1,9 +1,15 @@
 div {
   display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 div > img {
-  margin-top: -14rem;
+  position: absolute;
+  right: -10%;
+  top: -25%;
   transform: rotate(-15deg);
 }
-
