@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'secundary-button',
+  selector: 'secondary-button',
   standalone: true,
   imports: [RouterLink],
   templateUrl: './secondary-button.component.html',
