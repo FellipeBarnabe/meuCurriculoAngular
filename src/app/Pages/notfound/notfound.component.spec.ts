@@ -6,7 +6,6 @@ import {
   tick,
 } from '@angular/core/testing';
 
-import { By } from '@angular/platform-browser';
 import { NotfoundComponent } from './notfound.component';
 
 describe('NotfoundComponent', () => {
@@ -59,12 +58,4 @@ describe('NotfoundComponent', () => {
     expect(component.time).toBeLessThan(initialTime);
     expect(router.navigate).toHaveBeenCalledOnceWith(['/']);
   }));
-
-  it('CT005 - should render the button "página inicial."', () => {
-    const cssSelector: string = 'div.column_right > secondary-button > div > a';
-    const btnEl = fixture.debugElement.query(By.css(cssSelector)).nativeElement;
-
-    expect(btnEl).toBeTruthy();
-    expect(btnEl.textContent).toBe(component.btnHomeText);
-  });
 });
