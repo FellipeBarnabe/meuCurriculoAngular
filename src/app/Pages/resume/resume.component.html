@@ -1,44 +1,48 @@
-<header>
-  <h2>Fellipe Barnabé Alves<br />FullStack Jr.</h2>
-  <div class="column_right">
-    <a id="email">
-      <fa-icon [icon]="emailIcon"></fa-icon>
-      fellipebarnabe.stack&#64;gmail.com</a
-    >
-    <a
-      id="linkedin"
-      href="https://www.linkedin.com/in/fellipe-barnabé-b584b3277"
-    >
-    <fa-icon [icon]="linkedinIcon"></fa-icon>
-      https://www.linkedin.com/in/fellipeBarnabe
-    </a>
-    <a href="" id="whatsapp">
-      <fa-icon [icon]="whatsAppIcon"></fa-icon>
-      (81) 9 93100585</a>
-  </div>
-</header>
-<main>
-  <div class="column_left">
-    <article>
-      <resume-section
-        [resumeSectionList]="workExperienceList"
-        [educationSectionList]="educationList"
-      ></resume-section>
-    </article>
-  </div>
-  <div class="column_right">
-    <aside>
-      <unordered-list
-        [itemsList]="habilitiesList"
-        title="Habilidades"
-      ></unordered-list>
-    </aside>
-    <aside>
-      <unordered-list
-        [itemsList]="toolsList"
-        title="Ferramentas"
-      ></unordered-list>
-    </aside>
-  </div>
-</main>
-<app-contatc></app-contatc>
+<div id="paper-leaf">
+  <header>
+    <h2>Fellipe Barnabé Alves,<br />FullStack Jr.</h2>
+    <div class="column_right">
+      <a id="email">
+        <fa-icon [icon]="emailIcon"></fa-icon>
+        fellipebarnabe.stack&#64;gmail.com</a
+      >
+      <a
+        id="linkedin"
+        href="https://www.linkedin.com/in/fellipe-barnabé-b584b3277"
+      >
+        <fa-icon [icon]="linkedinIcon"></fa-icon>
+        https://www.linkedin.com/in/fellipeBarnabe
+      </a>
+      <a href="#irParaOZap" id="whatsapp">
+        <fa-icon [icon]="whatsAppIcon"></fa-icon>
+        (81) 9 93100585</a
+      >
+    </div>
+  </header>
+  <main>
+    <div class="column_left">
+      <article>
+        <resume-section
+          [resumeSectionList]="workExperienceList"
+          [educationSectionList]="educationList"
+        ></resume-section>
+      </article>
+    </div>
+    <div class="column_right">
+      <aside>
+        <unordered-list
+          [itemsList]="habilitiesList"
+          title="Habilidades"
+        ></unordered-list>
+      </aside>
+      <aside>
+        <unordered-list
+          [itemsList]="toolsList"
+          title="Ferramentas"
+        ></unordered-list>
+      </aside>
+    </div>
+  </main>
+  <app-contatc></app-contatc>
+</div>
+<div class="page-bottom-margin"></div>
