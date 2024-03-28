@@ -1,3 +1,8 @@
+header{
+  color: rgb(235, 91, 64, 1);
+  
+}
+
 /* Estilo Base */
 body {
   font-family: Arial, sans-serif;
@@ -6,12 +11,56 @@ body {
   color: #333;
   line-height: 1.6;
 }
+h2{
+  
+  width: 299px; /* largura */
+  height: 62px; /* altura */
+  position: absolute; /* posicionamento absoluto */
+  top: 40px; /* distância do topo */
+  left: 40px; /* distância da esquerda */
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 
+.column-right{
+  font-size: smaller;
+  
+  
+}
+
+#email{
+  color: rgb(235, 91, 64, 1);
+  float: right; /* Alinha os elementos à direita */
+  clear: both; /* Garante que cada elemento fique abaixo do anterior */
+  text-align: right; /* Alinha o texto à direita dentro dos elementos */
+  margin-bottom: 10px;
+  padding-top: 40px;
+  
+
+}
+#linkedin{
+  color: rgb(235, 91, 64, 1);
+  float: right; /* Alinha os elementos à direita */
+  clear: both; /* Garante que cada elemento fique abaixo do anterior */
+  text-align: right; /* Alinha o texto à direita dentro dos elementos */
+  margin-bottom: 10px;
+  
+}
+#whatsapp{
+  color: rgb(235, 91, 64, 1);
+  float: right; /* Alinha os elementos à direita */
+  clear: both; /* Garante que cada elemento fique abaixo do anterior */
+  text-align: right; /* Alinha o texto à direita dentro dos elementos */
+  margin-bottom: 10px;
+  
+}
 /* Container Principal */
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+  
 }
 
 /* Seções */
@@ -49,11 +98,7 @@ section {
 }
 
 /* Títulos de Seção */
-h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
+
 
 /* Listas */
 ul {
@@ -93,3 +138,5 @@ a:hover {
       align-items: flex-start;
     }
   }
+
+ 

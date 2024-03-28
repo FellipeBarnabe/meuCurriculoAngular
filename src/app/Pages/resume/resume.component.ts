@@ -63,8 +63,8 @@ export class ResumeComponent {
   ];
   educationList: EducationSection[] = [
     {
-      course: 'Formação Acadêmica',
-      institution: 'Módulo front-end: Desenvolvimento web',
+      course: 'Trybe',
+      institution: 'Desenvolvimento web: Módulo front-end',
       period: 'Abr 2023 - Ago 2023',
       activityList: [
         'Conhecimento avançado em HTML, CSS e JavaScript. Experiência prática com o framework React, com alguns projetos',

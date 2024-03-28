@@ -1,0 +1,45 @@
+body{
+    margin-top: 140px;
+    margin-left: -128px;
+    
+}
+
+h3{
+    margin-bottom: 30px;
+    
+}
+
+#office{
+    color: rgb(235, 91, 64, 1);
+    font-weight: bold;
+}
+#function{
+    margin-left: 300px;
+    margin-top: -20px;
+    
+}
+#period{
+    font-size: 12px;
+    font-style: italic;
+    
+    
+}
+.profissional-list{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-right: 370px;
+}
+    
+#course{
+    color: rgb(235, 91, 64, 1);
+    font-weight: bold;
+}
+#institution{
+    margin-left: 300px;
+    margin-top: -20px;
+}
+.activity-list{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 370px;
+}
