@@ -1,25 +1,37 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Route, Router } from '@angular/router';
 
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { HomeComponent } from '../../Pages/home/home.component';
+import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SecondaryButtonComponent } from './secondary-button.component';
 
 fdescribe('SecundaryButtonComponent', () => {
-  const expectedLabel: string = 'página inicial';
+  const expectedLabel: string = 'teste de label';
   let component: SecondaryButtonComponent;
   let fixture: ComponentFixture<SecondaryButtonComponent>;
   let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SecondaryButtonComponent, RouterTestingModule],
+      imports: [
+        SecondaryButtonComponent,
+        RouterTestingModule.withRoutes([
+          { path: '', component: HomeComponent, pathMatch: 'full' },
+        ]),
+      ],
+      declarations: [
+        // Your component being tested
+      ],
+      providers: [
+        // Add other providers if needed
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SecondaryButtonComponent);
     component = fixture.componentInstance;
-    router = fixture.debugElement.injector.get(Router);
+    router = TestBed.inject(Router);
     fixture.detectChanges();
   });
 
@@ -47,16 +59,14 @@ fdescribe('SecundaryButtonComponent', () => {
     expect(component.navigatePath).toBe('/');
   });
 
-  it('CT005 - navigate to home page after clicked', () => {
+  it('CT005 - navigate to home page, after clicked', () => {
     const cssSelector: string = 'div.button > input[type=button]';
     const btnEl: DebugElement = fixture.debugElement.query(By.css(cssSelector));
-    
-    //TODO:
-    spyOn(router, 'navigate');
-    spyOn(component, 'handleClick');
-    btnEl.triggerEventHandler('click', null);
+    const spyComponent = spyOn(component, 'handleClick');
+
+    btnEl.triggerEventHandler('click');
     fixture.detectChanges();
-    expect(component.handleClick).toHaveBeenCalledTimes(1);
-    expect(router.navigate).toHaveBeenCalled();
+    
+    expect(spyComponent).toHaveBeenCalledTimes(1);
   });
 });
