@@ -1,4 +1,4 @@
-body{
+div .container{
     margin-top: 140px;
     margin-left: -128px;
     
@@ -9,16 +9,16 @@ h3{
     
 }
 
-#office{
+.office{
     color: rgb(235, 91, 64, 1);
     font-weight: bold;
 }
-#function{
+.function{
     margin-left: 300px;
     margin-top: -20px;
     
 }
-#period{
+.period{
     font-size: 12px;
     font-style: italic;
     
@@ -30,11 +30,11 @@ h3{
     margin-right: 370px;
 }
     
-#course{
+.course{
     color: rgb(235, 91, 64, 1);
     font-weight: bold;
 }
-#institution{
+.institution{
     margin-left: 300px;
     margin-top: -20px;
 }

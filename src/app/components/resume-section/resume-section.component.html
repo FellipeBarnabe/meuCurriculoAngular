@@ -1,8 +1,8 @@
- <body><h3>Experiência Profissional</h3>
+ <div class ="container"><h3>Experiência Profissional</h3>
   <section *ngFor="let section of resumeSectionList">
-    <span id ="office">{{ section.role }}</span>
-    <h4 id ="function">{{ section.position }}</h4>
-    <span id ="period">{{ section.period }}</span>
+    <span class ="office">{{ section.role }}</span>
+    <h4 class ="function">{{ section.position }}</h4>
+    <span class ="period">{{ section.period }}</span>
   
     <ul class ="profissional-list">
       <li *ngFor="let activity of section.activityList">{{ activity }}</li>
@@ -12,12 +12,12 @@
 
 <h3>Educação</h3>
 <section *ngFor="let section of educationSectionList">
-  <span id ="course">{{ section.course }}</span>
-  <h4 id ="institution">{{ section.institution }}</h4>
-  <span id ="period">{{ section.period }}</span>
+  <span class ="course">{{ section.course }}</span>
+  <h4 class ="institution">{{ section.institution }}</h4>
+  <span class ="period">{{ section.period }}</span>
 
   <ul>
     <li class="activity-list" *ngFor="let activity of section.activityList">{{ activity }}</li>
   </ul>
 </section>
-</body>
+</div>

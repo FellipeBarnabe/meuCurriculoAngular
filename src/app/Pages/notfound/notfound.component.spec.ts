@@ -41,13 +41,13 @@ describe('NotfoundComponent', () => {
     expect(component.btnHomeText).toBe('página inicial');
   });
 
-  it('CT003 - should start the coundows timer with a minimum  of 10s.', () => {
+  it('CT003 - should start the countdown timer with a minimum  of 10s.', () => {
     expect(component.time).toBeGreaterThan(9);
   });
 
   it('CT004 - should navigate to home page after the countdow time is finished.', fakeAsync(() => {
-    const advanceTime: number = (component.time + 1) * 1000;
     const initialTime: number = component.time;
+    const advanceTime: number = (initialTime + 1) * 1000;
 
     spyOn(router, 'navigate');
 

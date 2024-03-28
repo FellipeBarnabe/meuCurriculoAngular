@@ -22,8 +22,8 @@ body {
   background-color: #f7f7f7;
 }
 
-div.column_left,
-div.column_right{
+.column_left,
+.column_right{
     display: flex;
     flex-direction: column;
     align-items: center;
