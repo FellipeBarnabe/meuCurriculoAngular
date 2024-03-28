@@ -10,5 +10,6 @@ import { SecondaryButtonComponent } from '../secondary-button/secondary-button.c
   styleUrl: './title.component.css',
 })
 export class TitleComponent {
-  label: string = 'abrir';
+ readonly label: string = 'abrir';
+ readonly resumePath:string = '/resume'
 }

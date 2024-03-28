@@ -1,0 +1,19 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div.column_right > h2{
+margin-bottom: 1.7rem;
+}
+div.column_right > p{
+  max-width: 265px;
+  text-align: center;
+  }
+
+div.column_right > secondary-button{
+  margin-top: 7.7rem;
+}

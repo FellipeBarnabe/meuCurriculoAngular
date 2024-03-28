@@ -2,8 +2,7 @@
   "name": "meu-curriculo-angular",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -32,6 +31,7 @@
     "@angular-devkit/build-angular": "^17.1.3",
     "@angular/cli": "^17.1.3",
     "@angular/compiler-cli": "^17.1.0",
+    "@testing-library/angular": "^15.2.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",

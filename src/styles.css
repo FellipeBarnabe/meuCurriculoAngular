@@ -1,22 +1,34 @@
 :root {
-    --vermelho-primario: #EB5B40;
-    --line_color: #1b1919;
-    --back_color: #f18d7b;
+  --vermelho-primario: #eb5b40;
+  --line_color: #1b1919;
+  --back_color: #f18d7b;
 }
 
 * {
-    margin: 0; 
-    padding: 0; 
-    font-family: "Inter", sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 body {
-    background-color: #f7f7f7;
-    /* Defina a cor de fundo desejada */
+  width: 100vw;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+div.column_left,
+div.column_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption {
+  visibility: hidden; ;
 }

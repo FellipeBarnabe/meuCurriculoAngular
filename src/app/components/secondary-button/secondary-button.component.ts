@@ -1,14 +1,21 @@
 import { Component, Input } from '@angular/core';
 
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'secundary-button',
+  selector: 'secondary-button',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './secondary-button.component.html',
   styleUrl: './secondary-button.component.css',
 })
 export class SecondaryButtonComponent {
   @Input() buttonText: string = '';
+  @Input() navigatePath: string = '/';
+
+  constructor(private router: Router) {}
+
+  handleClick() {
+    this.router.navigate([this.navigatePath]);
+  }
 }
